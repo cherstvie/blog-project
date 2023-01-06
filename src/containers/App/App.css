@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.orange-btn {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 115, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.orange-btn:hover {
+    color: black;
+    border-color: white;
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
+}
