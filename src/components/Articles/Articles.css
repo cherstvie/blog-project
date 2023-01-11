@@ -2,6 +2,7 @@ form {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .article-img img {
@@ -26,9 +27,29 @@ p {
 button {
     border: none;
     background-color: transparent;
+}
+
+.more-btn {
+    border: none;
+    background-color: transparent;
     text-decoration: underline;
     cursor: pointer;
     font-size: 14px;
-    align-self: flex-end;
     margin-bottom: 20px;
+}
+
+.category-btn {
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    align-self: center;
+    background-color: orange;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.article-btns {
+    display: flex;
+    justify-content: space-between;
 }
