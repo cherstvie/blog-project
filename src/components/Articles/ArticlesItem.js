@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Like } from 'components/Like/Like'
 import { Dislike } from 'components/Like/Dislike'
 

@@ -11,8 +11,19 @@
     border-radius: 10px;
     background-color: rgb(255, 115, 0);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .orange-btn:hover {
     border-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.active {
+    color: black;
 }
