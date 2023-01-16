@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const FavoritePage = () => {
+export const MercedesPage = () => {
     return (
         <div className="row">
-            <h1>Favorites</h1>
+            <h1>Mercedes</h1>
         </div>
     )
 }

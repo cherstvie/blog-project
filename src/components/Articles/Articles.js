@@ -5,20 +5,24 @@ import './Articles.css'
 
 export const Articles = ({ changeLikeState, likedArticles }) => {
     return (
-        <div className="row">
-            {articlesArray.map(
-                ({ id, title, category, description, image }) => (
-                    <ArticlesItem
-                        id={id}
-                        title={title}
-                        category={category}
-                        description={description}
-                        image={image}
-                        changeLikeState={changeLikeState}
-                        isLiked={likedArticles[id]}
-                    />
-                )
-            )}
-        </div>
+        <>
+            <h1>Articles</h1>
+            <div className="row">
+                {articlesArray.map(
+                    ({ id, title, category, description, image }) => (
+                        <ArticlesItem
+                            key={id}
+                            id={id}
+                            title={title}
+                            category={category}
+                            description={description}
+                            image={image}
+                            changeLikeState={changeLikeState}
+                            isLiked={likedArticles[id]}
+                        />
+                    )
+                )}
+            </div>
+        </>
     )
 }

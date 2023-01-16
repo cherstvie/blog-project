@@ -27,3 +27,24 @@ a {
 .active {
     color: black;
 }
+
+.categories-btn {
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    background-color: grey;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.category-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.categories-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}

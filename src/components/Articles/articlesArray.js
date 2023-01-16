@@ -42,3 +42,13 @@ export const articlesArray = [
         image: '/images/astonmartin.jpg',
     },
 ]
+
+export const getArticlesObject = (array) => {
+    return array.reduce(
+        (obj, article) => ({
+            ...obj,
+            [article.id]: article,
+        }),
+        {}
+    )
+}
