@@ -12,6 +12,7 @@
     background-color: rgb(255, 115, 0);
     cursor: pointer;
     text-decoration: none;
+    text-align: center;
 }
 
 .orange-btn:hover {

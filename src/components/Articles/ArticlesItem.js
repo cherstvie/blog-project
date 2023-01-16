@@ -1,11 +1,13 @@
 import React from 'react'
 import { Like } from 'components/Like/Like'
 import { Dislike } from 'components/Like/Dislike'
+import { Link } from 'react-router-dom'
 
 export const ArticlesItem = ({
     id,
     title,
     category,
+    categoryLink,
     description,
     image,
     changeLikeState,
@@ -17,9 +19,11 @@ export const ArticlesItem = ({
                 <div className="article-img">
                     <img src={image} alt="" />
                 </div>
-                <button type="button" className="category-btn">
-                    {category}
-                </button>
+                <Link to={'/categories/' + categoryLink}>
+                    <button type="button" className="category-btn">
+                        {category}
+                    </button>
+                </Link>
                 <h4>{title}</h4>
                 <p>{description}</p>
                 <div className="article-btns">

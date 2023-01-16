@@ -9,12 +9,20 @@ export const Articles = ({ changeLikeState, likedArticles }) => {
             <h1>Articles</h1>
             <div className="row">
                 {articlesArray.map(
-                    ({ id, title, category, description, image }) => (
+                    ({
+                        id,
+                        title,
+                        category,
+                        categoryLink,
+                        description,
+                        image,
+                    }) => (
                         <ArticlesItem
                             key={id}
                             id={id}
                             title={title}
                             category={category}
+                            categoryLink={categoryLink}
                             description={description}
                             image={image}
                             changeLikeState={changeLikeState}

@@ -5,6 +5,15 @@ form {
     margin-bottom: 20px;
 }
 
+form a {
+    align-self: center;
+}
+
+.form-field {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .article-img img {
     width: 100%;
     height: auto;
@@ -49,7 +58,6 @@ button {
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 10px;
-    align-self: center;
     background-color: orange;
     text-decoration: none;
     color: white;

@@ -3,3 +3,8 @@
     font-family: 'Montserrat', sans-serif;
     padding-bottom: 30px;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}

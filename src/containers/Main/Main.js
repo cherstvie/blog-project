@@ -23,7 +23,15 @@ export const Main = ({ changeLikeState, likedArticles }) => {
                             />
                         }
                     />
-                    <Route path="/favorites" element={<FavoritePage />} />
+                    <Route
+                        path="/favorites"
+                        element={
+                            <FavoritePage
+                                likedArticles={likedArticles}
+                                changeLikeState={changeLikeState}
+                            />
+                        }
+                    />
                     <Route path="/categories" element={<CategoriesPage />} />
                     <Route
                         path="/categories/mercedes"
