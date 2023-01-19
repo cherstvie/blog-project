@@ -2,6 +2,7 @@ import { articlesArray } from 'components/Articles/articlesArray'
 import React from 'react'
 import { Like } from 'components/Like/Like'
 import { Dislike } from 'components/Like/Dislike'
+import { Link } from 'react-router-dom'
 
 export const FavoritePage = ({ likedArticles, changeLikeState }) => {
     const articlesObject = articlesArray.reduce(
@@ -22,9 +23,16 @@ export const FavoritePage = ({ likedArticles, changeLikeState }) => {
                             className="form-field"
                             src={articlesObject[articleId].image}
                         ></img>
-                        <div className="form-field orange-btn">
-                            {articlesObject[articleId].category}
-                        </div>
+                        <Link
+                            to={
+                                '/categories/' +
+                                articlesObject[articleId].categoryLink
+                            }
+                        >
+                            <div className="form-field orange-btn">
+                                {articlesObject[articleId].category}
+                            </div>
+                        </Link>
                         <div
                             className="form-field"
                             onClick={() =>

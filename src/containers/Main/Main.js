@@ -4,7 +4,7 @@ import './Main.css'
 import { Route, Routes } from 'react-router-dom'
 import { FavoritePage } from 'pages/FavoritePage/FavoritePage'
 import { CategoriesPage } from 'pages/CategoriesPage/CategoriesPage'
-import { MercedesPage } from 'pages/CategoriesPage/MercedesPage/MarcedesPage'
+import { MercedesPage } from 'pages/CategoriesPage/MercedesPage/MercedesPage'
 import { FerrariPage } from 'pages/CategoriesPage/FerrariPage/FerrariPage'
 import { AstonMartinPage } from 'pages/CategoriesPage/AstonMartinPage/AstonMartinPage'
 import { AboutPage } from 'pages/AboutPage/AboutPage'
@@ -35,15 +35,30 @@ export const Main = ({ changeLikeState, likedArticles }) => {
                     <Route path="/categories" element={<CategoriesPage />} />
                     <Route
                         path="/categories/mercedes"
-                        element={<MercedesPage />}
+                        element={
+                            <MercedesPage
+                                likedArticles={likedArticles}
+                                changeLikeState={changeLikeState}
+                            />
+                        }
                     />
                     <Route
                         path="/categories/ferrari"
-                        element={<FerrariPage />}
+                        element={
+                            <FerrariPage
+                                likedArticles={likedArticles}
+                                changeLikeState={changeLikeState}
+                            />
+                        }
                     />
                     <Route
                         path="/categories/aston-martin"
-                        element={<AstonMartinPage />}
+                        element={
+                            <AstonMartinPage
+                                likedArticles={likedArticles}
+                                changeLikeState={changeLikeState}
+                            />
+                        }
                     />
                     <Route path="/about" element={<AboutPage />} />
                 </Routes>
