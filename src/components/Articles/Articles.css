@@ -68,3 +68,17 @@ button {
     display: flex;
     justify-content: space-between;
 }
+
+.slider-field {
+    margin-bottom: 50px;
+}
+
+.slider-field img {
+    border: 1px solid black;
+}
+
+.line {
+    height: 2px;
+    background-color: white;
+    margin-bottom: 15px;
+}

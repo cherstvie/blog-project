@@ -2,11 +2,13 @@ import React from 'react'
 import { ArticlesItem } from './ArticlesItem'
 import { articlesArray } from './articlesArray'
 import './Articles.css'
+import ArticlesSlider from 'components/ArticlesSlider/ArticlesSlider'
 
 export const Articles = ({ changeLikeState, likedArticles }) => {
     return (
         <>
             <h1>Articles</h1>
+            <ArticlesSlider />
             <div className="row">
                 {articlesArray.map(
                     ({
