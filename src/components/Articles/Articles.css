@@ -82,3 +82,13 @@ button {
     background-color: white;
     margin-bottom: 15px;
 }
+
+.hide-on-mobile {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .hide-on-mobile {
+        display: block;
+    }
+}

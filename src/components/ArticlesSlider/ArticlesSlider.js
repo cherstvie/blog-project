@@ -13,11 +13,12 @@ export default class ArticlesSlider extends Component {
             autoplaySpeed: 3000,
             cssEase: 'linear',
             className: 'slider-field',
+            arrows: false,
 
             centerMode: true,
         }
         return (
-            <div>
+            <div className="hide-on-mobile">
                 <div className="line"></div>
                 <Slider {...settings}>
                     <div>

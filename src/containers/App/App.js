@@ -15,8 +15,6 @@ export const App = () => {
         }))
     }
 
-    console.log(likedArticles)
-
     return (
         <>
             <Header />
