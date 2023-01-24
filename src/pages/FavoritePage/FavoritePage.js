@@ -22,6 +22,7 @@ export const FavoritePage = ({ likedArticles, changeLikeState }) => {
                         <img
                             className="form-field"
                             src={articlesObject[articleId].image}
+                            alt=""
                         ></img>
                         <Link
                             to={
