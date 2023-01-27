@@ -1,0 +1,75 @@
+.slide-out-menu {
+    position: fixed;
+    display: block;
+    width: 320px;
+    max-width: 650px;
+    height: 100%;
+    left: -320px;
+    top: 0;
+    padding: 40px;
+    z-index: 50;
+    background-color: #26272d;
+    transition: left 0.7s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.open {
+    left: 0;
+}
+
+.slide-out-menu .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 52px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.slide-out-menu .close-btn span {
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    background-color: white;
+}
+
+.slide-out-menu .close-btn span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.slide-out-menu .close-btn span:nth-child(2) {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.slide-out-menu-btn {
+    color: white;
+    cursor: pointer;
+}
+
+.slide-out-menu-btn:hover {
+    color: red;
+}
+
+.slide-out-menu-logo {
+    font-size: 32px;
+    color: blanchedalmond;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.development {
+    color: grey;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}

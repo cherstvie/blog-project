@@ -28,6 +28,10 @@
     top: 0;
 }
 
+.navigation:hover span {
+    background-color: grey;
+}
+
 .nav-bar span:nth-child(2) {
     top: 6px;
 }

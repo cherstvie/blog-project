@@ -1,18 +1,22 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './Header.css'
 
-export const Header = () => {
+export const Header = ({ openSlideOutMenu }) => {
     return (
         <div className="header">
             <div className="nav-bar">
-                <div className="navigation">
+                <div className="navigation" onClick={openSlideOutMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <div className="logo">Cherstvie</div>
+
+            <div className="logo">
+                <Link to="/">Cherstvie</Link>
+            </div>
+
             <ul className="menu">
                 <NavLink to="/">
                     <li className="orange-btn">Home</li>

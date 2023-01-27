@@ -4,6 +4,7 @@ import { Main } from 'containers/Main/Main'
 import React, { useState } from 'react'
 import './App.css'
 import './grid.css'
+import { SlideOutMenu } from 'components/SlideOutMenu/SlideOutMenu'
 
 export const App = () => {
     const [likedArticles, setLikedArticles] = useState({})
@@ -15,9 +16,20 @@ export const App = () => {
         }))
     }
 
+    let slideOutMenu = document.querySelector('.slide-out-menu')
+    const openSlideOutMenu = () => {
+        slideOutMenu.classList.toggle('open')
+        if (slideOutMenu.classList.contains('open')) {
+            slideOutMenu.classList.add('open')
+        } else {
+            slideOutMenu.classList.remove('open')
+        }
+    }
+
     return (
         <>
-            <Header />
+            <SlideOutMenu openSlideOutMenu={openSlideOutMenu} />
+            <Header openSlideOutMenu={openSlideOutMenu} />
             <Main
                 changeLikeState={changeLikeState}
                 likedArticles={likedArticles}
