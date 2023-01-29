@@ -5,7 +5,7 @@ export const AboutPage = () => {
         <>
             <h1>About</h1>
             <div className="about-form">
-                <img className="avatar" src="images/avatar.jpeg" />
+                <img className="avatar" src="images/avatar.jpeg" alt="" />
                 <div className="about-info">
                     Hello. My name is Pavlo. Im 26 years old.
                 </div>
