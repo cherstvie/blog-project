@@ -10,45 +10,55 @@ export const FavoritePage = ({ likedArticles, changeLikeState }) => {
         {}
     )
 
-    return (
-        <>
-            <h1>Favorites</h1>
-            <div className="row">
-                {Object.keys(likedArticles).map((articleId) => (
-                    <form
-                        key={articleId}
-                        className="col-xs-12 col-md-6 col-lg-4"
-                    >
-                        <img
-                            className="form-field"
-                            src={articlesObject[articleId].image}
-                            alt=""
-                        ></img>
-                        <Link
-                            to={
-                                '/categories/' +
-                                articlesObject[articleId].categoryLink
-                            }
+    if (Object.keys(likedArticles).length === 0) {
+        return (
+            <>
+                <h1>There are no liked articles.</h1>
+            </>
+        )
+    } else {
+        return (
+            <>
+                <h1>Favorites</h1>
+                <div className="row">
+                    {Object.keys(likedArticles).map((articleId) => (
+                        <form
+                            key={articleId}
+                            className="col-xs-12 col-md-6 col-lg-4"
                         >
-                            <div className="form-field orange-btn">
-                                {articlesObject[articleId].category}
+                            <img
+                                className="form-field"
+                                src={articlesObject[articleId].image}
+                                alt=""
+                            ></img>
+                            <Link
+                                to={
+                                    '/categories/' +
+                                    articlesObject[articleId].categoryLink
+                                }
+                            >
+                                <div className="form-field orange-btn">
+                                    {articlesObject[articleId].category}
+                                </div>
+                            </Link>
+                            <div
+                                className="form-field"
+                                onClick={() =>
+                                    changeLikeState(
+                                        articlesObject[articleId].id
+                                    )
+                                }
+                            >
+                                {likedArticles[articleId] === true ? (
+                                    <Like />
+                                ) : (
+                                    <Dislike />
+                                )}
                             </div>
-                        </Link>
-                        <div
-                            className="form-field"
-                            onClick={() =>
-                                changeLikeState(articlesObject[articleId].id)
-                            }
-                        >
-                            {likedArticles[articleId] === true ? (
-                                <Like />
-                            ) : (
-                                <Dislike />
-                            )}
-                        </div>
-                    </form>
-                ))}
-            </div>
-        </>
-    )
+                        </form>
+                    ))}
+                </div>
+            </>
+        )
+    }
 }
