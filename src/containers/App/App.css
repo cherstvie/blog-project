@@ -53,6 +53,29 @@ a {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.article-description {
+    font-size: 18px;
+    color: brown;
+    margin-bottom: 50px;
+}
+
+.about-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-info {
+    font-size: 20px;
+    color: blanchedalmond;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    margin-bottom: 30px;
+    width: 400px;
+}
+
 @media (min-width: 700px) {
     .category-row {
         flex-direction: row;

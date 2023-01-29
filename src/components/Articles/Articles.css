@@ -87,6 +87,36 @@ button {
     display: none;
 }
 
+.article-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.article-title {
+    font-size: 32px;
+    font-style: italic;
+    margin-bottom: -20px;
+}
+
+.back-btn {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.back-btn:hover {
+    background-color: lightcoral;
+    color: white;
+}
+
 @media (min-width: 768px) {
     .hide-on-mobile {
         display: block;

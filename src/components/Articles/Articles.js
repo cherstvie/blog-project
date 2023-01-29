@@ -4,7 +4,7 @@ import { articlesArray } from './articlesArray'
 import './Articles.css'
 import ArticlesSlider from 'components/ArticlesSlider/ArticlesSlider'
 
-export const Articles = ({ changeLikeState, likedArticles }) => {
+export const Articles = ({ changeLikeState, likedArticles, openArticle }) => {
     return (
         <>
             <h1>Articles</h1>
@@ -29,6 +29,7 @@ export const Articles = ({ changeLikeState, likedArticles }) => {
                             image={image}
                             changeLikeState={changeLikeState}
                             isLiked={likedArticles[id]}
+                            openArticle={openArticle}
                         />
                     )
                 )}

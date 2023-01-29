@@ -12,6 +12,7 @@ export const ArticlesItem = ({
     image,
     changeLikeState,
     isLiked,
+    openArticle,
 }) => {
     return (
         <>
@@ -30,9 +31,15 @@ export const ArticlesItem = ({
                     <button type="button" onClick={() => changeLikeState(id)}>
                         {isLiked ? <Like /> : <Dislike />}
                     </button>
-                    <button type="button" className="more-btn">
-                        Learn more
-                    </button>
+                    <Link to={'/articles/' + id}>
+                        <button
+                            type="button"
+                            className="more-btn"
+                            onClick={() => openArticle(id)}
+                        >
+                            Learn more
+                        </button>
+                    </Link>
                 </div>
             </form>
         </>

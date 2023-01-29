@@ -5,6 +5,8 @@ export const articlesArray = [
         category: 'Mercedes-Benz',
         categoryLink: 'mercedes',
         description: 'This is description of the car named Mercedes-Benz',
+        fullDescription:
+            'This is Mercedes-Benz and it is the best car in the world',
         image: '/images/mercedes.jpg',
     },
     {
@@ -72,3 +74,13 @@ export const articlesArray = [
         image: '/images/ferrari.jpg',
     },
 ]
+
+export const getArticlesObject = (array) => {
+    return array.reduce(
+        (obj, article) => ({
+            ...obj,
+            [article.id]: article,
+        }),
+        {}
+    )
+}

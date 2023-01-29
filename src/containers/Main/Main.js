@@ -1,4 +1,5 @@
 import React from 'react'
+import { articlesArray } from 'components/Articles/articlesArray'
 import { Articles } from 'components/Articles/Articles'
 import './Main.css'
 import { Route, Routes } from 'react-router-dom'
@@ -8,8 +9,14 @@ import { MercedesPage } from 'pages/CategoriesPage/MercedesPage/MercedesPage'
 import { FerrariPage } from 'pages/CategoriesPage/FerrariPage/FerrariPage'
 import { AstonMartinPage } from 'pages/CategoriesPage/AstonMartinPage/AstonMartinPage'
 import { AboutPage } from 'pages/AboutPage/AboutPage'
+import { ArticlePage } from 'pages/ArticlePage/ArticlePage'
 
-export const Main = ({ changeLikeState, likedArticles }) => {
+export const Main = ({
+    changeLikeState,
+    likedArticles,
+    openArticle,
+    activeArticle,
+}) => {
     return (
         <div className="main">
             <div className="container">
@@ -20,9 +27,22 @@ export const Main = ({ changeLikeState, likedArticles }) => {
                             <Articles
                                 changeLikeState={changeLikeState}
                                 likedArticles={likedArticles}
+                                openArticle={openArticle}
                             />
                         }
                     />
+                    {articlesArray.map((article) => (
+                        <Route
+                            key={article.id}
+                            path={'/articles/' + article.id}
+                            element={
+                                <ArticlePage
+                                    activeArticle={activeArticle}
+                                    articleId={article.id}
+                                />
+                            }
+                        />
+                    ))}
                     <Route
                         path="/favorites"
                         element={

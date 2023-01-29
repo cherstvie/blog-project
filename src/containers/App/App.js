@@ -8,6 +8,7 @@ import { SlideOutMenu } from 'components/SlideOutMenu/SlideOutMenu'
 
 export const App = () => {
     const [likedArticles, setLikedArticles] = useState({})
+    const [activeArticle, setActiveArticle] = useState(0)
 
     const changeLikeState = (id) => {
         setLikedArticles((prevState) => ({
@@ -16,8 +17,12 @@ export const App = () => {
         }))
     }
 
-    let slideOutMenu = document.querySelector('.slide-out-menu')
+    const openArticle = (id) => {
+        setActiveArticle(id)
+    }
+
     const openSlideOutMenu = () => {
+        const slideOutMenu = document.querySelector('.slide-out-menu')
         slideOutMenu.classList.toggle('open')
         if (slideOutMenu.classList.contains('open')) {
             slideOutMenu.classList.add('open')
@@ -33,6 +38,8 @@ export const App = () => {
             <Main
                 changeLikeState={changeLikeState}
                 likedArticles={likedArticles}
+                openArticle={openArticle}
+                activeArticle={activeArticle}
             />
             <Footer />
         </>
