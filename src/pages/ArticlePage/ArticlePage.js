@@ -10,8 +10,6 @@ export const ArticlePage = ({ activeArticle, articleId }) => {
 
     if (activeArticle === 0) {
         activeArticle = articleId
-    } else {
-        activeArticle = activeArticle
     }
     return (
         <>
