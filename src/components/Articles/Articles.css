@@ -41,6 +41,10 @@ p {
     text-align: center;
 }
 
+.article-form p {
+    text-align: left;
+}
+
 button {
     border: none;
     background-color: transparent;
@@ -59,7 +63,7 @@ button {
     border: 1px solid white;
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: orange;
+    background-color: palevioletred;
     text-decoration: none;
     color: white;
     margin-bottom: 20px;

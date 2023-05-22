@@ -9,7 +9,7 @@
     padding: 10px 20px;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: rgb(255, 115, 0);
+    background-color: pink;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
@@ -33,7 +33,7 @@ a {
     border: 2px solid black;
     border-radius: 10px;
     color: black;
-    background-color: grey;
+    background-color: powderblue;
     width: 200px;
     height: 200px;
     line-height: 200px;
@@ -58,6 +58,8 @@ a {
     font-size: 18px;
     color: brown;
     margin-bottom: 50px;
+    text-indent: 50px;
+    line-height: 1.7;
 }
 
 .about-form {

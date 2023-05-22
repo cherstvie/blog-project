@@ -29,9 +29,12 @@ export const ArticlePage = ({ activeArticle, articleId }) => {
                         {articlesObject[activeArticle].category}
                     </div>
                 </Link>
-                <div className="article-description">
-                    {articlesObject[activeArticle].fullDescription}
-                </div>
+                <div
+                    className="article-description"
+                    dangerouslySetInnerHTML={{
+                        __html: articlesObject[activeArticle].fullDescription,
+                    }}
+                ></div>
                 <Link to="/">
                     <button className="back-btn" type="button">
                         Back home
