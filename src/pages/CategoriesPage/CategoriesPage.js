@@ -6,14 +6,17 @@ export const CategoriesPage = () => {
         <>
             <h1>Choose category</h1>
             <div className="category-row">
-                <Link to="/categories/mercedes">
-                    <div className="categories-btn">Mercedes</div>
+                <Link to="/categories/spain">
+                    <div className="categories-btn">Spain</div>
                 </Link>
-                <Link to="/categories/ferrari">
-                    <div className="categories-btn">Ferrari</div>
+                <Link to="/categories/france">
+                    <div className="categories-btn">France</div>
                 </Link>
-                <Link to="/categories/aston-martin">
-                    <div className="categories-btn">Aston Martin</div>
+                <Link to="/categories/italy">
+                    <div className="categories-btn">Italy</div>
+                </Link>
+                <Link to="/categories/portugal">
+                    <div className="categories-btn">Portugal</div>
                 </Link>
             </div>
         </>

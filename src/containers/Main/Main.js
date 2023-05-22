@@ -5,9 +5,10 @@ import './Main.css'
 import { Route, Routes } from 'react-router-dom'
 import { FavoritePage } from 'pages/FavoritePage/FavoritePage'
 import { CategoriesPage } from 'pages/CategoriesPage/CategoriesPage'
-import { MercedesPage } from 'pages/CategoriesPage/MercedesPage/MercedesPage'
-import { FerrariPage } from 'pages/CategoriesPage/FerrariPage/FerrariPage'
-import { AstonMartinPage } from 'pages/CategoriesPage/AstonMartinPage/AstonMartinPage'
+import { ItalyPage } from 'pages/CategoriesPage/ItalyPage/ItalyPage'
+import { FrancePage } from 'pages/CategoriesPage/FrancePage/FrancePage'
+import { PortugalPage } from 'pages/CategoriesPage/PortugalPage/PortugalPage'
+import { SpainPage } from 'pages/CategoriesPage/SpainPage/SpainPage'
 import { AboutPage } from 'pages/AboutPage/AboutPage'
 import { ArticlePage } from 'pages/ArticlePage/ArticlePage'
 
@@ -54,27 +55,36 @@ export const Main = ({
                     />
                     <Route path="/categories" element={<CategoriesPage />} />
                     <Route
-                        path="/categories/mercedes"
+                        path="/categories/italy"
                         element={
-                            <MercedesPage
+                            <ItalyPage
                                 likedArticles={likedArticles}
                                 changeLikeState={changeLikeState}
                             />
                         }
                     />
                     <Route
-                        path="/categories/ferrari"
+                        path="/categories/france"
                         element={
-                            <FerrariPage
+                            <FrancePage
                                 likedArticles={likedArticles}
                                 changeLikeState={changeLikeState}
                             />
                         }
                     />
                     <Route
-                        path="/categories/aston-martin"
+                        path="/categories/portugal"
                         element={
-                            <AstonMartinPage
+                            <PortugalPage
+                                likedArticles={likedArticles}
+                                changeLikeState={changeLikeState}
+                            />
+                        }
+                    />
+                    <Route
+                        path="/categories/spain"
+                        element={
+                            <SpainPage
                                 likedArticles={likedArticles}
                                 changeLikeState={changeLikeState}
                             />

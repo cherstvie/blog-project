@@ -47,6 +47,7 @@ a {
     gap: 20px;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .categories-btn:hover {

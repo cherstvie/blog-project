@@ -2,17 +2,16 @@ import React from 'react'
 import { articlesArray } from 'components/Articles/articlesArray'
 import { ArticlesItem } from 'components/Articles/ArticlesItem'
 
-export const MercedesPage = ({ likedArticles, changeLikeState }) => {
-    const checkCategoryMercedes = (article) => {
-        return article.category === 'Mercedes-Benz'
+export const PortugalPage = ({ likedArticles, changeLikeState }) => {
+    const checkCategoryPortugal = (article) => {
+        return article.category === 'Portugal'
     }
-
     return (
         <>
-            <h1>Mercedes</h1>
+            <h1>Portugal</h1>
             <div className="row">
                 {articlesArray
-                    .filter(checkCategoryMercedes)
+                    .filter(checkCategoryPortugal)
                     .map(
                         ({
                             id,

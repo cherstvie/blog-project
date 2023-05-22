@@ -14,33 +14,34 @@ export default class ArticlesSlider extends Component {
             cssEase: 'linear',
             className: 'slider-field',
             arrows: false,
-
             centerMode: true,
         }
         return (
-            <div className="hide-on-mobile">
-                <div className="line"></div>
-                <Slider {...settings}>
-                    <div>
-                        <img src="/images/ferrari.jpg" alt="" />
-                    </div>
-                    <div>
-                        <img src="/images/mercedes.jpg" alt="" />
-                    </div>
-                    <div>
-                        <img src="/images/astonmartin.jpg" alt="" />
-                    </div>
-                    <div>
-                        <img src="/images/ferrari.jpg" alt="" />
-                    </div>
-                    <div>
-                        <img src="/images/mercedes.jpg" alt="" />
-                    </div>
-                    <div>
-                        <img src="/images/astonmartin.jpg" alt="" />
-                    </div>
-                </Slider>
-                <div className="line"></div>
+            <div className="slider-field">
+                <div className="hide-on-mobile">
+                    <div className="line"></div>
+                    <Slider {...settings} className="slider">
+                        <div>
+                            <img src="/images/france1.jpg" alt="" />
+                        </div>
+                        <div>
+                            <img src="/images/france2.jpg" alt="" />
+                        </div>
+                        <div>
+                            <img src="/images/italy1.jpg" alt="" />
+                        </div>
+                        <div>
+                            <img src="/images/spain2.jpg" alt="" />
+                        </div>
+                        <div>
+                            <img src="/images/spain1.jpg" alt="" />
+                        </div>
+                        <div>
+                            <img src="/images/portugal2.jpg" alt="" />
+                        </div>
+                    </Slider>
+                    <div className="line"></div>
+                </div>
             </div>
         )
     }

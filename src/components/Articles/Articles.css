@@ -38,6 +38,7 @@ p {
     color: rgb(50, 0, 0);
     margin-left: 15px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 button {
@@ -73,14 +74,9 @@ button {
     margin-bottom: 50px;
 }
 
-.slider-field img {
-    border: 1px solid black;
-}
-
 .line {
     height: 2px;
     background-color: white;
-    margin-bottom: 15px;
 }
 
 .hide-on-mobile {
@@ -115,6 +111,14 @@ button {
 .back-btn:hover {
     background-color: lightcoral;
     color: white;
+}
+
+.slider img {
+    height: 300px;
+    object-fit: contain;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0 15px;
 }
 
 @media (min-width: 768px) {

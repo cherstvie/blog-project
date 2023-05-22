@@ -28,14 +28,17 @@ export const Header = ({ openSlideOutMenu }) => {
                     <li className="orange-btn">
                         Categories
                         <ul className="submenu">
-                            <NavLink to="/categories/mercedes">
-                                <li className="orange-btn">Mercedes</li>
+                            <NavLink to="/categories/spain">
+                                <li className="orange-btn">Spain</li>
                             </NavLink>
-                            <NavLink to="/categories/ferrari">
-                                <li className="orange-btn">Ferrari</li>
+                            <NavLink to="/categories/france">
+                                <li className="orange-btn">France</li>
                             </NavLink>
-                            <NavLink to="/categories/aston-martin">
-                                <li className="orange-btn">Aston Martin</li>
+                            <NavLink to="/categories/italy">
+                                <li className="orange-btn">Italy</li>
+                            </NavLink>
+                            <NavLink to="/categories/portugal">
+                                <li className="orange-btn">Portugal</li>
                             </NavLink>
                         </ul>
                     </li>
