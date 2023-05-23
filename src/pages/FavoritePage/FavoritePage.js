@@ -4,7 +4,11 @@ import { Like } from 'components/Like/Like'
 import { Dislike } from 'components/Like/Dislike'
 import { Link } from 'react-router-dom'
 
-export const FavoritePage = ({ likedArticles, changeLikeState }) => {
+export const FavoritePage = ({
+    likedArticles,
+    changeLikeState,
+    openArticle,
+}) => {
     const articlesObject = articlesArray.reduce(
         (obj, article) => ({ ...obj, [article.id]: article }),
         {}
@@ -26,34 +30,61 @@ export const FavoritePage = ({ likedArticles, changeLikeState }) => {
                             key={articleId}
                             className="col-xs-12 col-md-6 col-lg-4"
                         >
-                            <img
-                                className="form-field"
-                                src={articlesObject[articleId].image}
-                                alt=""
-                            ></img>
-                            <Link
-                                to={
-                                    '/categories/' +
-                                    articlesObject[articleId].categoryLink
-                                }
-                            >
-                                <div className="form-field orange-btn">
-                                    {articlesObject[articleId].category}
+                            <div className="form-outline">
+                                <img
+                                    src={articlesObject[articleId].image}
+                                    alt=""
+                                ></img>
+                                <div className="form-title">
+                                    {articlesObject[articleId].title}
                                 </div>
-                            </Link>
-                            <div
-                                className="form-field"
-                                onClick={() =>
-                                    changeLikeState(
-                                        articlesObject[articleId].id
-                                    )
-                                }
-                            >
-                                {likedArticles[articleId] === true ? (
-                                    <Like />
-                                ) : (
-                                    <Dislike />
-                                )}
+                                <div className="more-position">
+                                    <Link
+                                        to={
+                                            '/articles/' +
+                                            articlesObject[articleId].id
+                                        }
+                                    >
+                                        <button
+                                            type="button"
+                                            className="more-btn"
+                                            onClick={() =>
+                                                openArticle(
+                                                    articlesObject[articleId].id
+                                                )
+                                            }
+                                        >
+                                            Learn more
+                                        </button>
+                                    </Link>
+                                </div>
+                                <div className="form-wrapper">
+                                    <div
+                                        className="form-field"
+                                        onClick={() =>
+                                            changeLikeState(
+                                                articlesObject[articleId].id
+                                            )
+                                        }
+                                    >
+                                        {likedArticles[articleId] === true ? (
+                                            <Like />
+                                        ) : (
+                                            <Dislike />
+                                        )}
+                                    </div>
+                                    <Link
+                                        to={
+                                            '/categories/' +
+                                            articlesObject[articleId]
+                                                .categoryLink
+                                        }
+                                    >
+                                        <div className="form-field orange-btn">
+                                            {articlesObject[articleId].category}
+                                        </div>
+                                    </Link>
+                                </div>
                             </div>
                         </form>
                     ))}

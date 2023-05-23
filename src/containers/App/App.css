@@ -79,6 +79,30 @@ a {
     width: 400px;
 }
 
+.form-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.form-title {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-style: italic;
+}
+
+.form-outline {
+    border: 2px solid black;
+    background-color: azure;
+}
+
+.more-position {
+    text-align: right;
+    margin-right: 20px;
+}
+
 @media (min-width: 700px) {
     .category-row {
         flex-direction: row;

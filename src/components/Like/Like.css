@@ -1,19 +1,17 @@
 .like-btn {
-    border: 1px solid white;
-    padding: 10px 20px;
+    border: 2px solid pink;
     border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .dislike-btn {
-    border: 1px solid white;
-    padding: 10px 20px;
+    border: 2px solid black;
     border-radius: 10px;
-    text-decoration: none;
-    color: black;
-    text-align: center;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    padding: 5px;
 }

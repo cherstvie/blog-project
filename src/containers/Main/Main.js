@@ -50,6 +50,7 @@ export const Main = ({
                             <FavoritePage
                                 likedArticles={likedArticles}
                                 changeLikeState={changeLikeState}
+                                openArticle={openArticle}
                             />
                         }
                     />
