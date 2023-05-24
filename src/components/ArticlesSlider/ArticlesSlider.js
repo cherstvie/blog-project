@@ -4,14 +4,12 @@ import Slider from 'react-slick'
 export default class ArticlesSlider extends Component {
     render() {
         const settings = {
-            dots: true,
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
             speed: 2000,
-            autoplaySpeed: 3000,
-            cssEase: 'linear',
+            autoplaySpeed: 2500,
             className: 'slider-field',
             arrows: false,
             centerMode: true,

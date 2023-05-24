@@ -7,6 +7,7 @@ form {
 
 form a {
     align-self: center;
+    width: 100%;
 }
 
 .form-field {
@@ -14,31 +15,39 @@ form a {
     padding-bottom: 10px;
 }
 
+.card {
+    border: 1px solid pink;
+    padding-bottom: 15px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .article-img img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+    height: 350px;
+    object-fit: cover;
 }
 
 h1 {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 50px;
     padding-bottom: 20px;
-    font-size: 48px;
+    font-size: 52px;
+    color: #222831;
+
 }
 
 h4 {
     font-size: 20px;
     font-weight: 600;
-    margin-bottom: 20px;
     text-align: center;
 }
 
 p {
     color: rgb(50, 0, 0);
-    margin-left: 15px;
-    margin-bottom: 20px;
     text-align: center;
+    padding: 0 10px;
 }
 
 .article-form p {
@@ -56,26 +65,39 @@ button {
     text-decoration: underline;
     cursor: pointer;
     font-size: 14px;
-    margin-bottom: 20px;
+}
+
+.more-btn:hover {
+    text-decoration: none;
+    color: purple;
 }
 
 .category-btn {
-    border: 1px solid white;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 7px 0;
     background-color: palevioletred;
     text-decoration: none;
     color: white;
-    margin-bottom: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.category-btn:hover {
+    background-color: pink;
 }
 
 .article-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 50px;
+}
+
+.article-btns a {
+    width: fit-content;
 }
 
 .slider-field {
     margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .line {
@@ -101,6 +123,11 @@ button {
     margin-bottom: -20px;
 }
 
+.article-form .category-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
 .back-btn {
     position: absolute;
     bottom: 0;
@@ -119,10 +146,10 @@ button {
 
 .slider img {
     height: 300px;
-    object-fit: contain;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding: 0 15px;
+    object-fit: cover;
+    margin: 20px;
+    border: 2px solid white;
+    border-left: 0;
 }
 
 @media (min-width: 768px) {

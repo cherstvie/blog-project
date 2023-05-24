@@ -38,26 +38,6 @@ export const FavoritePage = ({
                                 <div className="form-title">
                                     {articlesObject[articleId].title}
                                 </div>
-                                <div className="more-position">
-                                    <Link
-                                        to={
-                                            '/articles/' +
-                                            articlesObject[articleId].id
-                                        }
-                                    >
-                                        <button
-                                            type="button"
-                                            className="more-btn"
-                                            onClick={() =>
-                                                openArticle(
-                                                    articlesObject[articleId].id
-                                                )
-                                            }
-                                        >
-                                            Learn more
-                                        </button>
-                                    </Link>
-                                </div>
                                 <div className="form-wrapper">
                                     <div
                                         className="form-field"
@@ -83,6 +63,24 @@ export const FavoritePage = ({
                                         <div className="form-field orange-btn">
                                             {articlesObject[articleId].category}
                                         </div>
+                                    </Link>
+                                    <Link
+                                        to={
+                                            '/articles/' +
+                                            articlesObject[articleId].id
+                                        }
+                                    >
+                                        <button
+                                            type="button"
+                                            className="more-btn"
+                                            onClick={() =>
+                                                openArticle(
+                                                    articlesObject[articleId].id
+                                                )
+                                            }
+                                        >
+                                            Learn more
+                                        </button>
                                     </Link>
                                 </div>
                             </div>

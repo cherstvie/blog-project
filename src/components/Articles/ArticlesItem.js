@@ -17,29 +17,34 @@ export const ArticlesItem = ({
     return (
         <>
             <form className="col-xs-12 col-md-6 col-lg-4">
-                <div className="article-img">
-                    <img src={image} alt="" />
-                </div>
-                <Link to={'/categories/' + categoryLink}>
-                    <button type="button" className="category-btn">
-                        {category}
-                    </button>
-                </Link>
-                <h4>{title}</h4>
-                <p>{description}</p>
-                <div className="article-btns">
-                    <button type="button" onClick={() => changeLikeState(id)}>
-                        {isLiked ? <Like /> : <Dislike />}
-                    </button>
-                    <Link to={'/articles/' + id}>
-                        <button
-                            type="button"
-                            className="more-btn"
-                            onClick={() => openArticle(id)}
-                        >
-                            Learn more
+                <div className="card">
+                    <div className="article-img">
+                        <img src={image} alt="" />
+                    </div>
+                    <Link to={'/categories/' + categoryLink}>
+                        <button type="button" className="category-btn">
+                            {category}
                         </button>
                     </Link>
+                    <h4>{title}</h4>
+                    <p>{description}</p>
+                    <div className="article-btns">
+                        <button
+                            type="button"
+                            onClick={() => changeLikeState(id)}
+                        >
+                            {isLiked ? <Like /> : <Dislike />}
+                        </button>
+                        <Link to={'/articles/' + id}>
+                            <button
+                                type="button"
+                                className="more-btn"
+                                onClick={() => openArticle(id)}
+                            >
+                                Learn more
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </form>
         </>
